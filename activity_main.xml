@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ibge"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:text="Código do ibge"
+        app:layout_constraintBottom_toTopOf="@+id/gia"
+        app:layout_constraintEnd_toEndOf="@+id/gia"
+        app:layout_constraintStart_toStartOf="@+id/gia"
+        app:layout_constraintTop_toBottomOf="@+id/uf" />
+
+    <TextView
+        android:id="@+id/prefixo"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:text="Prefixo telefonico"
+        app:layout_constraintBottom_toTopOf="@+id/siafi"
+        app:layout_constraintEnd_toEndOf="@+id/siafi"
+        app:layout_constraintStart_toStartOf="@+id/siafi"
+        app:layout_constraintTop_toBottomOf="@+id/gia" />
+
+    <TextView
+        android:id="@+id/bairro"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:text="Bairro"
+        app:layout_constraintBottom_toTopOf="@+id/uf"
+        app:layout_constraintEnd_toEndOf="@+id/uf"
+        app:layout_constraintStart_toStartOf="@+id/uf"
+        app:layout_constraintTop_toBottomOf="@+id/complemento" />
+
+    <TextView
+        android:id="@+id/siafi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="301dp"
+        android:text="Código siafi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prefixo" />
+
+    <TextView
+        android:id="@+id/complemento"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:text="Complemento"
+        app:layout_constraintBottom_toTopOf="@+id/bairro"
+        app:layout_constraintEnd_toEndOf="@+id/bairro"
+        app:layout_constraintStart_toStartOf="@+id/bairro"
+        app:layout_constraintTop_toBottomOf="@+id/logradouro" />
+
+    <TextView
+        android:id="@+id/logradouro"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:text="Logradouro"
+        app:layout_constraintBottom_toTopOf="@+id/complemento"
+        app:layout_constraintEnd_toEndOf="@+id/complemento"
+        app:layout_constraintStart_toStartOf="@+id/complemento"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/localidade"
+        android:layout_width="281dp"
+        android:layout_height="16dp"
+        android:text="Localidade"
+        app:layout_constraintBottom_toTopOf="@+id/complemento"
+        app:layout_constraintEnd_toEndOf="@+id/complemento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/complemento"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <TextView
+        android:id="@+id/uf"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:text="UF"
+        app:layout_constraintBottom_toTopOf="@+id/ibge"
+        app:layout_constraintEnd_toEndOf="@+id/ibge"
+        app:layout_constraintStart_toStartOf="@+id/ibge"
+        app:layout_constraintTop_toBottomOf="@+id/bairro" />
+
+    <TextView
+        android:id="@+id/gia"
+        android:layout_width="281dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:text="Código gia"
+        app:layout_constraintBottom_toTopOf="@+id/prefixo"
+        app:layout_constraintEnd_toEndOf="@+id/prefixo"
+        app:layout_constraintStart_toStartOf="@+id/prefixo"
+        app:layout_constraintTop_toBottomOf="@+id/ibge" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/logradouro"
+        app:layout_constraintEnd_toEndOf="@+id/logradouro"
+        app:layout_constraintStart_toStartOf="@+id/logradouro"
+        app:layout_constraintTop_toBottomOf="@+id/cep" />
+
+    <EditText
+        android:id="@+id/cep"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="44dp"
+        android:inputType="number|textPortalAddress"
+        android:maxLength="8"
+        android:text="Digite o CEP"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
